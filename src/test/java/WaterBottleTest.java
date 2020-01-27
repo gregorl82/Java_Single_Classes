@@ -30,6 +30,13 @@ public class WaterBottleTest {
     }
 
     @Test
+    public void cannotHaveNegativeVolume(){
+        waterBottle.empty();
+        waterBottle.drink();
+        assertEquals(0, waterBottle.getVolume());
+    }
+
+    @Test
     public void fill(){
         waterBottle.empty();
         waterBottle.fill();
